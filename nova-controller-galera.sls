@@ -86,6 +86,7 @@ keystone-pkgs:
       - pkg.installed: keystone
     - context:
         infra: {{ pillar['infra'] }}
+        secrets: {{ pillar['secrets'] }}
         networking: {{ pillar['networking'] }}
         endpoints: {{ pillar['endpoints'] }}
         keystone: {{ pillar['keystone'] }}
@@ -131,6 +132,7 @@ glance-services:
       - pkg.installed: glance-pkgs
       - file.recurse: /root/scripts
     - context:
+        secrets: {{ pillar['secrets'] }}
         infra: {{ pillar['infra'] }}
         networking: {{ pillar['networking'] }}
         endpoints: {{ pillar['endpoints'] }}
@@ -176,6 +178,7 @@ cinder-services:
     - source: salt://openstack/cinder
     - template: jinja
     - context:
+        secrets: {{ pillar['secrets'] }}
         infra: {{ pillar['infra'] }}
         networking: {{ pillar['networking'] }}
         endpoints: {{ pillar['endpoints'] }}
@@ -203,6 +206,7 @@ cinder-services:
         glance: {{ pillar['glance'] }}
         cinder: {{ pillar['cinder'] }}
         rabbit: {{ pillar['rabbit'] }}
+        secrets: {{ pillar['secrets'] }}
         swift: {{ pillar['swift'] }}
         quantum: {{ pillar['quantum'] }}
     
@@ -215,6 +219,7 @@ cinder-services:
       - pkg.installed: nova-pkgs
     - context:
         infra: {{ pillar['infra'] }}
+        secrets: {{ pillar['secrets'] }}
         networking: {{ pillar['networking'] }}
         endpoints: {{ pillar['endpoints'] }}
         keystone: {{ pillar['keystone'] }}

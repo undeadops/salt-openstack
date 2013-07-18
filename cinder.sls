@@ -68,6 +68,7 @@ cinder-setup:
     - template: jinja
     - defaults:
     - context:
+        secrets: {{ pillar['secrets'] }}
         cinder: {{ pillar['cinder'] }}
         keystone: {{ pillar['keystone'] }}
         nova: {{ pillar['nova'] }}

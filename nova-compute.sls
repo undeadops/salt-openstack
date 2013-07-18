@@ -16,7 +16,8 @@
 #
 include:
   - openstack.nova-config
-  - openstack.root-scripts
+
+#- openstack.root-scripts
 
 nova-pkgs:
   pkg.installed:
