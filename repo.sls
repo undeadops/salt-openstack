@@ -29,10 +29,9 @@ ubuntu-cloud-keyring:
     - file: {{ pillar['infra']['mirror']['{{ mirror_name }}']['file'] }}
     - keyid: {{ pillar['infra']['mirror']['{{ mirror_name }}']['keyid'] }}
     - keyserver: keyserver.ubuntu.com
-    - required:
+    - require:
       - pkg.installed: ubuntu-cloud-keyring
     - require_in:
-      - pkg.installed: ubuntu-cloud-keyring
       - pkg.installed: nova-pkgs
       - pkg.installed: glance-pkgs
       - pkg.installed: cinder-pkgs
