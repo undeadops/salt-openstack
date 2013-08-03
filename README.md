@@ -1,5 +1,12 @@
 ### What's new ?
 
+#### 2013.08.01 
+- Changes:
+  - Finally got time to merge my changes I have been doing.
+  - To get cross AZ working in my environment I'm using this driver
+     https://github.com/hpcloud/nova-network-drivers
+
+
 Lots! This is how I am installing OpenStack in a multi host environment.  At the moment this creates two classes of servers.
 
 - all-in-one server
