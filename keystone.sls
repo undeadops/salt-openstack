@@ -1,6 +1,6 @@
 # Copyright 2012-2013 Hewlett-Packard Development Company, L.P.
 # All Rights Reserved.
-# Copyright 2013 Yazz D. Atlas <yazz.atlas@hp.com>
+# Authored by Yazz D. Atlas <yazz.atlas@hp.com>
 #
 #    Licensed under the Apache License, Version 2.0 (the "License"); you may
 #    not use this file except in compliance with the License. You may obtain
