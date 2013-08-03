@@ -1,0 +1,1 @@
+../../base/endpoints-az2-v1.sls
