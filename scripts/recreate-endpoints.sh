@@ -47,4 +47,6 @@ exit;
         --internalurl "$CINDER_PROTOCOL://$CONTROLLER_INTERNAL_ADDRESS:$CINDER_PORT/v1/\$(tenant_id)s"
 
 
-nova-manage floating create --pool dbaas-aw2az2-v1 --interface vlan717  --ip_range 15.125.16.0/20
+nova-manage floating create --pool az1-v1 --interface vlan217  --ip_range 192.168.0.0/20
+nova-manage floating create --pool az2-v1 --interface vlan217  --ip_range 192.168.16.0/20
+nova-manage floating create --pool az3-v1 --interface vlan217  --ip_range 192.168.32.0/20
